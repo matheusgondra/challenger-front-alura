@@ -25,16 +25,19 @@ const theme = {
 	}
 }
 
-const AppContainer = styled.div`
-
+const AppWrapper = styled.div`
+	background-color: ${props => props.theme.colors.blue[800]};
+	padding: 0 16px;
+	height: 100vh;
+	font-family: "Inter", sans-serif;
 `;
 
 function App() {
 	return (
 		<ThemeProvider theme={theme}>
-			<AppContainer>
+			<AppWrapper>
 				<GlogalStyle />
-			</AppContainer>
+			</AppWrapper>
 		</ThemeProvider>
 	);
 }

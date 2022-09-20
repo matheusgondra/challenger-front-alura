@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import { Header } from "./components/Header";
 
 const GlogalStyle = createGlobalStyle`
 	* {
@@ -37,6 +38,7 @@ function App() {
 		<ThemeProvider theme={theme}>
 			<AppWrapper>
 				<GlogalStyle />
+				<Header />
 			</AppWrapper>
 		</ThemeProvider>
 	);

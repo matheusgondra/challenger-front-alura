@@ -1,6 +1,5 @@
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
-import { Menu } from "./components/Menu";
-import { Header } from "./components/Header";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { Home } from "./screen/Home";
 
 const GlogalStyle = createGlobalStyle`
 	* {
@@ -27,21 +26,11 @@ const theme = {
 	}
 }
 
-const AppWrapper = styled.div`
-	background-color: ${props => props.theme.colors.blue[800]};
-	padding: 0 16px;
-	height: 100vh;
-	font-family: "Inter", sans-serif;
-`;
-
 function App() {
 	return (
 		<ThemeProvider theme={theme}>
-			<AppWrapper>
 				<GlogalStyle />
-				<Header />
-				<Menu />
-			</AppWrapper>
+				<Home />
 		</ThemeProvider>
 	);
 }

@@ -1,7 +1,7 @@
 import { Code, UsersThree } from "phosphor-react";
 import { MenuWrapper } from "./styles";
 
-export function Menu() {
+export function MenuNav() {
     return (
         <MenuWrapper>
             <h2>Menu</h2>

@@ -3,9 +3,52 @@ import styled from "styled-components";
 export const HomeWrapper = styled.div`
 	background-color: ${props => props.theme.colors.blue[800]};
 	padding: 0 16px;
-	height: 100vh;
+	padding-bottom: 40px;
+	height: 100%;
 	font-family: "Inter", sans-serif;
 	main {
+		#code-editor {
+			margin-top: 56px;
+			display: flex;
+			flex-direction: column;
+			div {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+				width: 100%;
+				height: 492px;
+				border-radius: 8px;
+				background-color: #6BD1FF;
+				padding: 0 32px;
+				div {
+					display: block;
+					color: #FFF;
+					border-radius: 8px;
+					background-color: #141414;
+					height: 428px;
+					padding: 16px;
+					font-size: ${({ theme }) => theme.fonts.md};
+					pre {
+						white-space: pre-wrap;
+						code {
+							outline: none;
+						}
+					}
+					
+				}
+			}
+			button {
+				margin-top: 32px;
+				color: #FFF;
+				background-color: #5081FB14;
+				padding: 16px;
+				border: none;
+				border-radius: 8px;
+				outline: none;
+				font-size: ${({ theme }) => theme.fonts.lg};
+			}
+		}
 		form {
 			display: flex;
 			flex-direction: column;

@@ -1,13 +1,28 @@
+import { useState } from "react";
 import { Header } from "../../components/Header";
 import { MenuNav } from "../../components/MenuNav";
 import { HomeWrapper } from "./styles";
 
 export function Home() {
+	const [codeFocus, setCodeFocus] = useState(false);
+
     return (
         <HomeWrapper>
             <Header />
             <main>
                 <MenuNav />
+					 <section id="code-editor">
+						<div>
+							<div onBlur={() => setCodeFocus(false)} onClick={e => console.log(e.target)}>
+								<pre>
+									<code contentEditable>
+									const express = require("express");
+									</code>
+								</pre>
+							</div>
+						</div>
+						<button>Visualizar com o highlight</button>
+					 </section>
                 <form>
                     <section id="projects">
                         <h2>Seu projeto</h2>

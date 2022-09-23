@@ -1,11 +1,8 @@
-import { useState } from "react";
 import { Header } from "../../components/Header";
 import { MenuNav } from "../../components/MenuNav";
 import { HomeWrapper } from "./styles";
 
 export function Home() {
-	const [codeFocus, setCodeFocus] = useState(false);
-
     return (
         <HomeWrapper>
             <Header />
@@ -13,7 +10,7 @@ export function Home() {
                 <MenuNav />
 					 <section id="code-editor">
 						<div>
-							<div onBlur={() => setCodeFocus(false)} onClick={e => console.log(e.target)}>
+							<div>
 								<pre>
 									<code contentEditable>
 									const express = require("express");

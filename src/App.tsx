@@ -7,6 +7,9 @@ const GlogalStyle = createGlobalStyle`
 		padding: 0;
 		box-sizing: border-box;
 	}
+	body {
+		background-color: #051D3B;
+	}
 `;
 
 const theme = {

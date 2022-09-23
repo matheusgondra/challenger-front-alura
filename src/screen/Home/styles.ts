@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const HomeWrapper = styled.div`
-	background-color: ${props => props.theme.colors.blue[800]};
 	padding: 0 16px;
 	padding-bottom: 40px;
 	height: 100%;
@@ -113,6 +112,7 @@ export const HomeWrapper = styled.div`
 						font-family: inherit;
 						border: none;
 						border-radius: 8px;
+						height: 56px;
 						option {
 							color: #FFF;
 							background-color: ${({ theme}) => theme.colors.blue[800]};
@@ -124,6 +124,14 @@ export const HomeWrapper = styled.div`
 						height: 40px;
 						border: none;
 						border-radius: 4px;
+					}
+					@media screen and (min-width: 768px) {
+						flex-direction: row;
+						align-items: center;
+						input {
+							flex: 1;
+							height: 56px;
+						}
 					}
 				}
 			}

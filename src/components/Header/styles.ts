@@ -5,6 +5,7 @@ export const HeaderContainer = styled.header`
 	align-items: center;
 	justify-content: space-between;
 	padding-top: 27px;
+	gap: 40px;
 
 	input {
 		display: none;

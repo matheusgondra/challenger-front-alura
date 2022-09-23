@@ -6,6 +6,9 @@ export const HeaderContainer = styled.header`
 	justify-content: space-between;
 	padding-top: 27px;
 	gap: 40px;
+	@media screen and (min-width: 768px) {
+		padding-top: 32px;
+	}
 
 	input {
 		display: none;

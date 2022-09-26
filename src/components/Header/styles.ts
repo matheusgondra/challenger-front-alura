@@ -6,13 +6,25 @@ export const HeaderContainer = styled.header`
 	justify-content: space-between;
 	padding-top: 27px;
 	gap: 40px;
-	@media screen and (min-width: 768px) {
-		padding-top: 32px;
-	}
-
 	input {
 		display: none;
-		@media screen and (min-width: 768px) {
+	}
+	div {
+		button {
+			background-color: transparent;
+			border: none;
+			&:last-child {
+				margin-left: 36px;
+				margin-right: 14px;
+			}
+		}
+	}
+	.user {
+		display: none;
+	}
+	@media screen and (min-width: 768px) {
+		padding-top: 32px;
+		input {
 			display: initial;
 			color: #fff;
 			font-family: inherit;
@@ -24,40 +36,26 @@ export const HeaderContainer = styled.header`
 			outline: none;
 			width: 431px;
 			height: 56px;
-
 			&:hover {
 				background-color: #ffffff3d;
 			}
 		}
-
-		@media screen and (min-width: 1024px) {
-			width: 752px;
-		}
-	}
-
-	div {
-		button {
-			background-color: transparent;
-			border: none;
-			&:last-child {
-				margin-left: 36px;
-				margin-right: 14px;
-			}
-			@media screen and (min-width: 768px) {
+		div {
+			button {
 				&:first-child {
 					display: none;
 				}
 			}
 		}
-		
-		@media screen and (min-width: 1024px) {
+	}
+	@media screen and (min-width: 1024px) {
+		input {
+			width: 752px;
+		}
+		div {
 			display: none;
 		}
-	}
-
-	.user {
-		display: none;
-		@media screen and (min-width: 1024px) {
+		.user {
 			display: flex;
 			align-items: center;
 			img {
@@ -66,7 +64,6 @@ export const HeaderContainer = styled.header`
 				border-radius: 50%;
 				margin-right: 8px
 			}
-	
 			span {
 				color: #FFF
 			}

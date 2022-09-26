@@ -5,24 +5,11 @@ export const HomeWrapper = styled.div`
 	padding-bottom: 40px;
 	height: 100%;
 	font-family: "Inter", sans-serif;
-	@media screen and (min-width: 768px) {
-		padding: 0 32px;
-		padding-bottom: 40px;
-	}
 	main {
 		margin-top: 40px;
-		@media screen and (min-width: 1024px) {
-			display: flex;
-			justify-content: space-between;
-			gap: 40px;
-		}
 		#code-editor {
 			display: flex;
 			flex-direction: column;
-			@media screen and (min-width: 1024px){
-				width: 752px;
-				margin-left: 44px;
-			}
 			div {
 				display: flex;
 				justify-content: center;
@@ -69,9 +56,6 @@ export const HomeWrapper = styled.div`
 				flex-direction: column;
 				gap: 16px;
 				margin-top: 40px;
-				@media screen and (min-width: 1024px) {
-					margin-top: 0;
-				}
 				h2 {
 					font-size: ${({ theme }) => theme.fonts.sm};
 					line-height: 18px;
@@ -142,14 +126,6 @@ export const HomeWrapper = styled.div`
 						border: none;
 						border-radius: 4px;
 					}
-					@media screen and (min-width: 768px) {
-						flex-direction: row;
-						align-items: center;
-						input {
-							flex: 1;
-							height: 56px;
-						}
-					}
 				}
 			}
 			button {
@@ -163,6 +139,40 @@ export const HomeWrapper = styled.div`
 				font-size: ${({ theme }) => theme.fonts.lg};
 				line-height: 24px;
 				color: #051D3B;
+			}
+		}
+	}
+	@media screen and (min-width: 768px) {
+		padding: 0 32px;
+		padding-bottom: 40px;
+		main {
+			form {
+				#language {
+					div {
+						flex-direction: row;
+						align-items: center;
+						input {
+							flex: 1;
+							height: 56px;
+						}
+					}
+				}
+			}
+		}
+	}
+	@media screen and (min-width: 1024px) {
+		main {
+			display: flex;
+			justify-content: space-between;
+			gap: 40px;
+			#code-editor {
+				width: 752px;
+				margin-left: 44px;
+			}
+			form {
+				#projects {
+					margin-top: 0;
+				}
 			}
 		}
 	}

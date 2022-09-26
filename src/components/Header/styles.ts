@@ -51,6 +51,7 @@ export const HeaderContainer = styled.header`
 	@media screen and (min-width: 1024px) {
 		input {
 			width: 752px;
+			margin-right: 120px;
 		}
 		div {
 			display: none;

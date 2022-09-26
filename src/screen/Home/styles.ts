@@ -173,7 +173,6 @@ export const HomeWrapper = styled.div`
 			gap: 40px;
 			#code-editor {
 				width: 752px;
-				margin-left: 44px;
 			}
 			form {
 				width: 272px;

@@ -144,6 +144,14 @@ export const HomeWrapper = styled.div`
 		padding: 0 32px;
 		padding-bottom: 40px;
 		main {
+			#code-editor {
+				div {
+					height: 366px;
+					div {
+						height: 302px;
+					}
+				}
+			}
 			form {
 				#language {
 					div {

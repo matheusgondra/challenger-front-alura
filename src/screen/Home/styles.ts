@@ -64,7 +64,6 @@ export const HomeWrapper = styled.div`
 					font-weight: 400;
 					text-transform: uppercase;
 				}
-	
 				input {
 					outline: none;
 					border: none;
@@ -72,17 +71,16 @@ export const HomeWrapper = styled.div`
 					color: #FFF;
 					padding: 16px 14px;
 					border-radius: 8px;
-					flex: 1;
+					flex: 1 1 56px;
 				}
 				textarea {
 					outline: none;
 					border: none;
 					background-color: #FFFFFF29;
 					color: #FFF;
-					padding: 16px 0;
-					padding-left: 14px;
+					padding: 16px 14px;
 					border-radius: 8px;
-					flex: 1;
+					flex: 1 1 80px;
 					font-family: inherit;
 					resize: none;
 				}
@@ -170,8 +168,22 @@ export const HomeWrapper = styled.div`
 				margin-left: 44px;
 			}
 			form {
+				width: 272px;
 				#projects {
 					margin-top: 0;
+				}
+				#language {
+					div {
+						flex-direction: column;
+						align-items: initial;
+						input {
+							flex-basis: auto;
+						}
+					}
+				}
+				button {
+					height: 56px;
+					flex-grow: 0;
 				}
 			}
 		}

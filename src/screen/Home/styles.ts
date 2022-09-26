@@ -84,6 +84,7 @@ export const HomeWrapper = styled.div`
 					border-radius: 8px;
 					flex: 1;
 					font-family: inherit;
+					resize: none;
 				}
 			}
 			#language {

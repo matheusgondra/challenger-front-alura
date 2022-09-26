@@ -138,7 +138,7 @@ export const HomeWrapper = styled.div`
 			}
 			button {
 				flex: 1;
-				margin-top: 40px;
+				margin-top: 32px;
 				padding: 16px 0;
 				border: none;
 				border-radius: 8px;

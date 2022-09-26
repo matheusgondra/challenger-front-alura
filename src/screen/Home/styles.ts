@@ -5,6 +5,10 @@ export const HomeWrapper = styled.div`
 	padding-bottom: 40px;
 	height: 100%;
 	font-family: "Inter", sans-serif;
+	@media screen and (min-width: 768px) {
+		padding: 0 32px;
+		padding-bottom: 40px;
+	}
 	main {
 		#code-editor {
 			margin-top: 56px;

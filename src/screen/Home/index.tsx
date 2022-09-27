@@ -3,7 +3,7 @@ import { MenuNav } from "../../components/MenuNav";
 import { HomeWrapper } from "./styles";
 import { ChromePicker } from "react-color";
 import { useState } from "react";
-import { CodeEditor } from "../CodeEditor";
+import { CodeEditor } from "../../components/CodeEditor";
 
 export function Home() {
 	const [colorEditor, setColorEditor] = useState("#6BD1FF");

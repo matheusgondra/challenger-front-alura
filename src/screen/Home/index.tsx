@@ -6,6 +6,7 @@ import { useState } from "react";
 
 export function Home() {
 	const [colorEditor, setColorEditor] = useState("#6BD1FF");
+	const [colorPickerDisplay, setColorPickerDisplay] = useState(false);
 
 	return (
 		<HomeWrapper colorEditor={colorEditor}>
@@ -36,11 +37,19 @@ export function Home() {
 								<option value="HTML">HTML</option>
 								<option value="CSS">CSS</option>
 							</select>
-							<div className="input-color"></div>
-							{/* <ChromePicker
-								color={colorEditor}
-								onChangeComplete={(color) => setColorEditor(color.hex)}	
-							/> */}
+							<div className="color-picker-container">
+								<div className="input-color" onClick={() => setColorPickerDisplay(!colorPickerDisplay)}>
+								</div>
+								{colorPickerDisplay && (
+									<div className="color-picker-container">
+										<ChromePicker
+											className="color-picker"
+											color={colorEditor}
+											onChangeComplete={(color) => setColorEditor(color.hex)}
+										/>
+									</div>
+								)}
+							</div>
 						</div>
 					</section>
 					<button>Salvar projeto</button>

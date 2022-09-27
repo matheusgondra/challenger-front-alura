@@ -122,12 +122,25 @@ export const HomeWrapper = styled.div<Props>`
 							opacity: .64;
 						}
 					}
-					.input-color {
+					.color-picker-container {
+						height: 56px;
 						width: 100%;
-						height: 40px;
-						border: 8px solid #FFF;
-						border-radius: 4px;
-						background-color: ${props => props.colorEditor};
+						.input-color {
+							width: 100%;
+							height: 56px;
+							border: 8px solid #FFF;
+							border-radius: 4px;
+							background-color: ${props => props.colorEditor};
+						}
+						.color-picker-container {
+							width: 225px;
+							position: relative;
+							bottom: 264px;
+							z-index: 2;
+							left: 25%;
+							height: 239.75px;
+							background-color: white;
+						}
 					}
 				}
 			}

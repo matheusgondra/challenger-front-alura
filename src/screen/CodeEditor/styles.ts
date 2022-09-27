@@ -23,6 +23,9 @@ export const CodeEditorWrapper = styled.div<Props>`
 		height: 428px;
 		padding: 16px;
 		font-size: ${({ theme }) => theme.fonts.md};
+		img {
+			margin-bottom: 24px;
+		}
 		pre {
 			white-space: pre-wrap;
 			code {

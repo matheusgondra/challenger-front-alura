@@ -1,4 +1,6 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { Community } from "./screen/Community";
 import { Home } from "./screen/Home";
 
 const GlogalStyle = createGlobalStyle`
@@ -29,11 +31,16 @@ const theme = {
 	}
 }
 
+const router = createBrowserRouter([
+	{ path: "/", element: <Home /> },
+	{ path: "comunidade", element: <Community /> }
+]);
+
 function App() {
 	return (
 		<ThemeProvider theme={theme}>
 				<GlogalStyle />
-				<Home />
+				<RouterProvider router={router} />
 		</ThemeProvider>
 	);
 }

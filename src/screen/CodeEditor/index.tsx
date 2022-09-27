@@ -3,11 +3,12 @@ import macIcon from "../../assets/mac_buttons.svg";
 
 interface Props {
 	colorEditor: string;
+	type?: "primary" | "secondary";
 }
 
-export function CodeEditor({ colorEditor }: Props) {
+export function CodeEditor({ colorEditor, type = "primary" }: Props) {
 	return (
-		<CodeEditorWrapper colorEditor={colorEditor}>
+		<CodeEditorWrapper colorEditor={colorEditor} type={type}>
 			<div>
 				<img src={macIcon} alt="botões do mac" />
 				<pre>

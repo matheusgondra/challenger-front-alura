@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface Props {
 	colorEditor: string;
+	type: "primary" | "secondary";
 }
 
 export const CodeEditorWrapper = styled.div<Props>`
@@ -10,7 +11,7 @@ export const CodeEditorWrapper = styled.div<Props>`
 	align-items: center;
 	flex-wrap: wrap;
 	width: 100%;
-	height: 492px;
+	height: ${props => props.type === "primary" ? "492px" : "402px"};
 	border-radius: 8px;
 	background-color: ${(props) => props.colorEditor};
 	padding: 0 32px;
@@ -20,7 +21,7 @@ export const CodeEditorWrapper = styled.div<Props>`
 		width: 100%;
 		border-radius: 8px;
 		background-color: #141414;
-		height: 428px;
+		height: ${props => props.type === "primary" ? "428px" : "354px"};
 		padding: 16px;
 		font-size: ${({ theme }) => theme.fonts.md};
 		img {
@@ -34,9 +35,9 @@ export const CodeEditorWrapper = styled.div<Props>`
 		}
 	}
 	@media screen and (min-width: 768px) {
-		height: 366px;
+		height: ${props => props.type === "primary" ? "366px" : "342px"};
 		div {
-			height: 302px;
+			height: ${props => props.type === "primary" ? "302px" : "294px"};
 		}
 	}
 `;

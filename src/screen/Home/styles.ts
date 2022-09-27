@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const HomeWrapper = styled.div`
+interface Props {
+	colorEditor: string;
+}
+
+export const HomeWrapper = styled.div<Props>`
 	padding: 0 16px;
 	padding-bottom: 40px;
 	height: 100%;
@@ -18,7 +22,7 @@ export const HomeWrapper = styled.div`
 				width: 100%;
 				height: 492px;
 				border-radius: 8px;
-				background-color: #6BD1FF;
+				background-color: ${props => props.colorEditor};
 				padding: 0 32px;
 				div {
 					display: block;
@@ -98,7 +102,7 @@ export const HomeWrapper = styled.div`
 					font-weight: 400;
 					text-transform: uppercase;
 				}
-				div {
+				.language-container {
 					display: flex;
 					flex-direction: column;
 					gap: 16px;
@@ -114,15 +118,16 @@ export const HomeWrapper = styled.div`
 						height: 56px;
 						option {
 							color: #FFF;
-							background-color: ${({ theme}) => theme.colors.blue[800]};
+							background-color: ${({ theme }) => theme.colors.blue[800]};
 							opacity: .64;
 						}
 					}
-					input {
+					.input-color {
 						width: 100%;
 						height: 40px;
-						border: none;
+						border: 8px solid #FFF;
 						border-radius: 4px;
+						background-color: ${props => props.colorEditor};
 					}
 				}
 			}
@@ -154,10 +159,10 @@ export const HomeWrapper = styled.div`
 			}
 			form {
 				#language {
-					div {
+					.language-container {
 						flex-direction: row;
 						align-items: center;
-						input {
+						.input-color {
 							flex: 1;
 							height: 56px;
 						}
@@ -180,10 +185,10 @@ export const HomeWrapper = styled.div`
 					margin-top: 0;
 				}
 				#language {
-					div {
+					.language-container {
 						flex-direction: column;
 						align-items: initial;
-						input {
+						.input-color {
 							flex-basis: auto;
 						}
 					}

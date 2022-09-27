@@ -1,5 +1,6 @@
 import { List, MagnifyingGlass } from "phosphor-react";
 import logo from "../../assets/logo-alura-dev.svg";
+import { Author } from "../Author";
 import { HeaderContainer } from "./styles";
 
 
@@ -9,7 +10,7 @@ export function Header() {
 		<HeaderContainer>
 			<img src={logo} alt="Logo" />
 			<input placeholder="Busque por algo" />
-			<div>
+			<div className="mobile-buttons">
 				<button type="button">
 					<MagnifyingGlass size={20} color="#FFF" weight="bold" />
 				</button>
@@ -17,10 +18,10 @@ export function Header() {
 					<List size={20} color="#FFF" weight="bold" />
 				</button>
 			</div>
-			<div className="user">
-				<img src="https://github.com/matheusgondra.png" alt="Foto de perfil" />
-				<span>Matheus</span>
-			</div>
+			<Author
+				name="Matheus"
+				photo="https://github.com/matheusgondra.png"
+			/>
 		</HeaderContainer>
 	);
 }

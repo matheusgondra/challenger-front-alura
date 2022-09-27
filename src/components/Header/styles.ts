@@ -9,7 +9,7 @@ export const HeaderContainer = styled.header`
 	input {
 		display: none;
 	}
-	div {
+	.mobile-buttons {
 		button {
 			background-color: transparent;
 			border: none;
@@ -18,9 +18,6 @@ export const HeaderContainer = styled.header`
 				margin-right: 14px;
 			}
 		}
-	}
-	.user {
-		display: none;
 	}
 	@media screen and (min-width: 768px) {
 		padding-top: 32px;
@@ -40,7 +37,7 @@ export const HeaderContainer = styled.header`
 				background-color: #ffffff3d;
 			}
 		}
-		div {
+		.mobile-buttons {
 			button {
 				&:first-child {
 					display: none;
@@ -53,21 +50,8 @@ export const HeaderContainer = styled.header`
 			width: 752px;
 			margin-right: 120px;
 		}
-		div {
+		.mobile-buttons {
 			display: none;
-		}
-		.user {
-			display: flex;
-			align-items: center;
-			img {
-				width: 32px;
-				height: 32px;
-				border-radius: 50%;
-				margin-right: 8px
-			}
-			span {
-				color: #FFF
-			}
 		}
 	}
 `;

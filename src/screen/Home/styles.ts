@@ -14,33 +14,6 @@ export const HomeWrapper = styled.div<Props>`
 		#code-editor {
 			display: flex;
 			flex-direction: column;
-			div {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				flex-wrap: wrap;
-				width: 100%;
-				height: 492px;
-				border-radius: 8px;
-				background-color: ${props => props.colorEditor};
-				padding: 0 32px;
-				div {
-					display: block;
-					color: #FFF;
-					border-radius: 8px;
-					background-color: #141414;
-					height: 428px;
-					padding: 16px;
-					font-size: ${({ theme }) => theme.fonts.md};
-					pre {
-						white-space: pre-wrap;
-						code {
-							outline: none;
-						}
-					}
-					
-				}
-			}
 			button {
 				margin-top: 32px;
 				color: #FFF;
@@ -162,14 +135,6 @@ export const HomeWrapper = styled.div<Props>`
 		padding: 0 32px;
 		padding-bottom: 40px;
 		main {
-			#code-editor {
-				div {
-					height: 366px;
-					div {
-						height: 302px;
-					}
-				}
-			}
 			form {
 				#language {
 					.language-container {

@@ -3,6 +3,7 @@ import { MenuNav } from "../../components/MenuNav";
 import { HomeWrapper } from "./styles";
 import { ChromePicker } from "react-color";
 import { useState } from "react";
+import { CodeEditor } from "../CodeEditor";
 
 export function Home() {
 	const [colorEditor, setColorEditor] = useState("#6BD1FF");
@@ -14,13 +15,7 @@ export function Home() {
 			<main>
 				<MenuNav />
 				<section id="code-editor">
-					<div>
-						<div>
-							<pre>
-								<code contentEditable>const express = require("express");</code>
-							</pre>
-						</div>
-					</div>
+					<CodeEditor colorEditor={colorEditor} />
 					<button>Visualizar com o highlight</button>
 				</section>
 				<form>

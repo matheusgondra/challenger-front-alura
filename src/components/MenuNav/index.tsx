@@ -1,5 +1,6 @@
 import { Code, UsersThree } from "phosphor-react";
 import { MenuWrapper } from "./styles";
+import { Link } from "react-router-dom";
 
 export function MenuNav() {
     return (
@@ -8,16 +9,20 @@ export function MenuNav() {
             <nav>
                 <ul>
                     <li>
-                        <div>
-                            <Code size={20} color="#FFF" weight="bold" />
-                        </div>
-                        <span>Editor de código</span>
+								<Link to="/">
+									<div>
+										<Code size={20} color="#FFF" weight="bold" />
+									</div>
+									<span>Editor de código</span>
+								</Link>
                     </li>
                     <li className="off">
-                        <div>
-                            <UsersThree size={20} color="#FFF" weight="fill" />
-                        </div>
-                        <span>Comunidade</span>
+                        <Link to="/comunidade">
+									<div>
+										<UsersThree size={20} color="#FFF" weight="fill" />
+									</div>
+									<span>Comunidade</span>
+								</Link>
                     </li>
                 </ul>
             </nav>

@@ -17,8 +17,6 @@ export const MenuWrapper = styled.section`
                 list-style: none;
                 li {
                     display: flex;
-                    align-items: center;
-                    gap: 16px;
                     width: 189px;
                     text-align: center;
                     margin-bottom: 16px;
@@ -28,24 +26,29 @@ export const MenuWrapper = styled.section`
                             background-color: ${({ theme }) => theme.colors.blue[200]};
                         }
                     }
-                    div {
-                        width: 48px;
-                        height: 48px;
-                        border-radius: 16px;
-                        background-color: ${({ theme }) => theme.colors.blue[300]};
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        
-                        &:active {
-                            border: 4px solid rgba(80, 129, 251, 0.72);
-                        }
-                    }
-
-                    span {
-                        color: #FFF;
-                        flex: 1;
-                    }
+						  a {
+							display: flex;
+                    	align-items: center;
+							gap: 16px;
+							  div {
+									width: 48px;
+									height: 48px;
+									border-radius: 16px;
+									background-color: ${({ theme }) => theme.colors.blue[300]};
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									
+									&:active {
+										 border: 4px solid rgba(80, 129, 251, 0.72);
+									}
+							  }
+	
+							  span {
+									color: #FFF;
+									flex: 1;
+							  }
+						  }
                 }
                 .off {
                     opacity: 0.56;

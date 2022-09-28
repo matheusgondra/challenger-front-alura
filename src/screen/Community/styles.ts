@@ -7,7 +7,10 @@ export const CommunityWrapper = styled.div`
 	font-family: "Inter", sans-serif;
 	main {
 		margin-top: 40px;
-		section {
+		#cards {
+			display: flex;
+			flex-direction: column;
+			gap: 32px;
 			.card {
 				background-color: #00000029;
 				color: #FFF;

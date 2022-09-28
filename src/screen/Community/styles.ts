@@ -46,6 +46,10 @@ export const CommunityWrapper = styled.div`
 			}
 		}
 	}
+	@media screen and (min-width: 768px) {
+		padding: 0 32px;
+		padding-bottom: 40px;
+	}
 	@media screen and (min-width: 1024px) {
 		main {
 			display: flex;
@@ -56,7 +60,6 @@ export const CommunityWrapper = styled.div`
 			}
 		}
 	}
-
 	@media screen and (min-width: 1440px){
 		main {
 			#cards {

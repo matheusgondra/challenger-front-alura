@@ -46,4 +46,24 @@ export const CommunityWrapper = styled.div`
 			}
 		}
 	}
+	@media screen and (min-width: 1024px) {
+		main {
+			display: flex;
+			#cards {
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: flex-end;
+			}
+		}
+	}
+
+	@media screen and (min-width: 1440px){
+		main {
+			#cards {
+				.card {
+					width: 520px;
+				}
+			}
+		}
+	}
 `;

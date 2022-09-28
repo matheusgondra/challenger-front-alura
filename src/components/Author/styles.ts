@@ -7,9 +7,14 @@ interface Props {
 export const AuthorWrapper = styled.div<Props>`
 	display: ${props => props.isVisible ? "flex" : "none"};
 	align-items: center;
+	border-radius: 8px;
+	padding: ${props => props.isVisible ? "8px" : "12px"};
+	&:hover {
+		background-color: #FFFFFF14;
+	}
 	img {
-		width: 32px;
-		height: 32px;
+		width: ${props => props.isVisible ? "24px" : "32px"};
+		height: ${props => props.isVisible ? "24px" : "32px"};
 		border-radius: 50%;
 		margin-right: 8px;
 	}

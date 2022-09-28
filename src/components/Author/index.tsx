@@ -3,10 +3,10 @@ import { AuthorWrapper } from "./styles";
 interface Props {
 	photo: string;
 	name: string;
-	visible: boolean;
+	visible?: boolean;
 }
 
-export function Author({ name, photo, visible }: Props) {
+export function Author({ name, photo, visible = false }: Props) {
 	return (
 		<AuthorWrapper isVisible={visible}>
 			<img src={photo} alt="Foto de perfil" />

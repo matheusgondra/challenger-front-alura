@@ -9,6 +9,7 @@ export const AuthorWrapper = styled.div<Props>`
 	align-items: center;
 	border-radius: 8px;
 	padding: ${props => props.isVisible ? "8px" : "12px"};
+	cursor: pointer;
 	&:hover {
 		background-color: #FFFFFF14;
 	}

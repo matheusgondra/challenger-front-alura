@@ -21,8 +21,18 @@ export const HomeWrapper = styled.div<Props>`
 				padding: 16px;
 				border: none;
 				border-radius: 8px;
-				outline: none;
 				font-size: ${({ theme }) => theme.fonts.lg};
+				cursor: pointer;
+				height: 56px;
+				&:hover {
+					background-color: #5081FB29;
+				}
+				&:active {
+					background-color: #5081FB3D;
+				}
+				&:focus {
+					outline: 4px solid #5081FB3D;
+				}
 			}
 		}
 		form {
@@ -49,6 +59,9 @@ export const HomeWrapper = styled.div<Props>`
 					padding: 16px 14px;
 					border-radius: 8px;
 					flex: 1 1 56px;
+					&:hover {
+						background-color: #FFFFFF3D;
+					}
 				}
 				textarea {
 					outline: none;
@@ -60,6 +73,9 @@ export const HomeWrapper = styled.div<Props>`
 					flex: 1 1 80px;
 					font-family: inherit;
 					resize: none;
+					&:hover {
+						background-color: #FFFFFF3D;
+					}
 				}
 			}
 			#language {
@@ -89,6 +105,10 @@ export const HomeWrapper = styled.div<Props>`
 						border: none;
 						border-radius: 8px;
 						height: 56px;
+						outline: none;
+						&:hover {
+							background-color: #FFFFFF3D;
+						}
 						option {
 							color: #FFF;
 							background-color: ${({ theme }) => theme.colors.blue[800]};
@@ -128,6 +148,16 @@ export const HomeWrapper = styled.div<Props>`
 				font-size: ${({ theme }) => theme.fonts.lg};
 				line-height: 24px;
 				color: #051D3B;
+				cursor: pointer;
+				&:hover {
+					background-color: #7BA4FC;
+				}
+				&:active {
+					background-color: #96B9FD;
+				}
+				&:focus {
+					outline: 4px solid #5081FBB8;
+				}
 			}
 		}
 	}

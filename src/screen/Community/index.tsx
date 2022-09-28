@@ -1,4 +1,5 @@
 import { ChatCircle, HeartStraight } from "phosphor-react";
+import { useState } from "react";
 import { Author } from "../../components/Author";
 import { CodeEditor } from "../../components/CodeEditor";
 import { Header } from "../../components/Header";
@@ -6,11 +7,13 @@ import { MenuNav } from "../../components/MenuNav";
 import { CommunityWrapper } from "./styles";
 
 export function Community() {
+	const [liked, setLiked] = useState(false);
+
 	return (
 		<CommunityWrapper>
 			<Header />
 			<main>
-				<MenuNav />
+				<MenuNav page="community" />
 				<section id="cards">
 					<div className="card">
 						<CodeEditor
@@ -28,8 +31,8 @@ export function Community() {
 										<ChatCircle size={20} color="#ffffff" weight="fill" />
 										<span>9</span>
 									</div>
-									<div>
-										<HeartStraight size={20} color="#ffffff" weight="fill" />
+									<div onClick={() => setLiked(!liked)}>
+										<HeartStraight size={20} color={liked ? "red": "#FFF"} weight="fill" />
 										<span>9</span>
 									</div>
 								</div>

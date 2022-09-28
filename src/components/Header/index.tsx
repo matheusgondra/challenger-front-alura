@@ -14,7 +14,7 @@ export function Header() {
 				<button type="button">
 					<MagnifyingGlass size={20} color="#FFF" weight="bold" />
 				</button>
-				<button type="button">
+				<button className="list" type="button">
 					<List size={20} color="#FFF" weight="bold" />
 				</button>
 			</div>

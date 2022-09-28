@@ -10,12 +10,19 @@ export const HeaderContainer = styled.header`
 		display: none;
 	}
 	.mobile-buttons {
+		display: flex;
+		align-items: center;
 		button {
 			background-color: transparent;
 			border: none;
-			&:last-child {
-				margin-left: 36px;
-				margin-right: 14px;
+			border-radius: 16px;
+			padding: 12px;
+			gap: 8px;
+			&:hover {
+				background-color: #5081FB14;
+			}
+			&:active {
+				background-color: #5081FB29;
 			}
 		}
 	}

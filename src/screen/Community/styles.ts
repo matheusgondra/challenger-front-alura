@@ -39,6 +39,15 @@ export const CommunityWrapper = styled.div`
 								display: flex;
 								align-items: center;
 								gap: 10px;
+								padding: 8px;
+								border-radius: 16px;
+								cursor: pointer;
+								&:hover {
+									background-color: #FFFFFF14;
+								}
+								&:active {
+									background-color: #FFFFFF29;
+								}
 							}
 						}
 					}

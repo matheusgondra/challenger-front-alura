@@ -170,9 +170,12 @@ export const HomeWrapper = styled.div<Props>`
 					.language-container {
 						flex-direction: row;
 						align-items: center;
-						.input-color {
+						.color-picker-container {
 							flex: 1;
-							height: 56px;
+							.input-color {
+								flex: 1;
+								height: 56px;
+							}
 						}
 					}
 				}

@@ -8,6 +8,8 @@ import { CodeEditor } from "../../components/CodeEditor";
 export function Home() {
 	const [colorEditor, setColorEditor] = useState("#6BD1FF");
 	const [colorPickerDisplay, setColorPickerDisplay] = useState(false);
+	const [language, setLanguage] = useState("");
+	const [highlight, setHighlight] = useState(false);
 
 	return (
 		<HomeWrapper colorEditor={colorEditor}>
@@ -15,8 +17,8 @@ export function Home() {
 			<main>
 				<MenuNav />
 				<section id="code-editor">
-					<CodeEditor colorEditor={colorEditor} />
-					<button>Visualizar com o highlight</button>
+					<CodeEditor highlightTrigger={highlight} language={language} colorEditor={colorEditor} />
+					<button onClick={() => setHighlight(!highlight)}>Visualizar com o highlight</button>
 				</section>
 				<form>
 					<section id="projects">
@@ -27,7 +29,7 @@ export function Home() {
 					<section id="language">
 						<h2>Personalização</h2>
 						<div className="language-container">
-							<select>
+							<select onChange={e => setLanguage(e.target.value)}>
 								<option value="Javascript">Javascript</option>
 								<option value="HTML">HTML</option>
 								<option value="CSS">CSS</option>

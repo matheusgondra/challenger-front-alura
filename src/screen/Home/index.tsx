@@ -10,6 +10,8 @@ export function Home() {
 	const [colorPickerDisplay, setColorPickerDisplay] = useState(false);
 	const [language, setLanguage] = useState("");
 	const [highlight, setHighlight] = useState(false);
+	const [projectName, setProjectName] = useState("");
+	const [description, setDescription] = useState("");
 
 	return (
 		<HomeWrapper colorEditor={colorEditor}>
@@ -23,8 +25,16 @@ export function Home() {
 				<form>
 					<section id="projects">
 						<h2>Seu projeto</h2>
-						<input placeholder="Nome do seu projeto" />
-						<textarea placeholder="Descrição do seu projeto" />
+						<input
+							placeholder="Nome do seu projeto"
+							value={projectName}
+							onChange={e => setProjectName(e.target.value)}
+						/>
+						<textarea
+							placeholder="Descrição do seu projeto"
+							value={description}
+							onChange={e => setDescription(e.target.value)}	
+						/>
 					</section>
 					<section id="language">
 						<h2>Personalização</h2>

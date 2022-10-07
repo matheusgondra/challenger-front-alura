@@ -1,3 +1,11 @@
+interface valuesProps {
+    name: string;
+    description: string;
+    colorEditor: string;
+    language: string;
+    code: string | null;
+}
+
 class Storagy {
     static verifyStoragy(key: string) {
         const items = localStorage.getItem(key);
@@ -9,8 +17,9 @@ class Storagy {
         return items;
     }
     
-    add(key: string, values: string) {
-        localStorage.setItem(key, values);
+    add(key: string, values: valuesProps) {
+        const _values = JSON.stringify(values);
+        localStorage.setItem(key, _values);
     }
 
     get(key: string) {

@@ -2,8 +2,9 @@ import { Header } from "../../components/Header";
 import { MenuNav } from "../../components/MenuNav";
 import { HomeWrapper } from "./styles";
 import { ChromePicker } from "react-color";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { CodeEditor } from "../../components/CodeEditor";
+import storagy from "../../services/Storagy";
 
 export function Home() {
 	const [colorEditor, setColorEditor] = useState("#6BD1FF");
@@ -13,6 +14,18 @@ export function Home() {
 	const [projectName, setProjectName] = useState("");
 	const [description, setDescription] = useState("");
 	const [codeContent, setCodeContent] = useState<string | null>("");
+
+	const handleSubmit = (event: FormEvent) => {
+		event.preventDefault();
+		// Implementar API do LocalStoregy para salvar projetos
+		storagy.add("projects", {
+			code: codeContent,
+			colorEditor: colorEditor,
+			description: description,
+			language: language,
+			name: projectName
+		})
+	}
 
 	return (
 		<HomeWrapper colorEditor={colorEditor}>
@@ -28,15 +41,7 @@ export function Home() {
 					/>
 					<button onClick={() => setHighlight(!highlight)}>Visualizar com o highlight</button>
 				</section>
-				<form onSubmit={(e) => {
-					e.preventDefault();
-					console.log("Nome do projeto: ", projectName);
-					console.log("Descrição do projeto: ", description);
-					console.log("Cor do projeto: ", colorEditor);
-					console.log("Codigo do projeto: ", codeContent);
-					console.log("Linguagem do projeto: ", language);
-
-				}}>
+				<form onSubmit={(e) => handleSubmit(e)}>
 					<section id="projects">
 						<h2>Seu projeto</h2>
 						<input

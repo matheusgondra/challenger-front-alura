@@ -10,7 +10,7 @@ export const CommunityWrapper = styled.div`
 		#cards {
 			display: flex;
 			flex-direction: column;
-			gap: 32px;
+			/* /* gap: 32px; */
 			.card {
 				background-color: #00000029;
 				color: #FFF;
@@ -52,7 +52,7 @@ export const CommunityWrapper = styled.div`
 						}
 					}
 				}
-			}
+			} */
 		}
 	}
 	@media screen and (min-width: 768px) {

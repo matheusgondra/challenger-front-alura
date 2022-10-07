@@ -8,23 +8,22 @@ interface valuesProps {
 
 class Storagy {
     static verifyStoragy(key: string) {
-        const items = localStorage.getItem(key);
-
-        if(!items) {
+        const itemsExist = localStorage.hasOwnProperty(key);
+        if(!itemsExist) {
             throw new Error("Item não encontrado");
         }
-
-        return items;
+        return itemsExist;
     }
     
     add(key: string, values: valuesProps) {
-        const _values = JSON.stringify(values);
-        localStorage.setItem(key, _values);
+        let projects = [];
+        if(Storagy.verifyStoragy(key)) {
+            projects = [...this.get(key)];
+        }
     }
 
     get(key: string) {
-        const items = Storagy.verifyStoragy(key);
-        const projects = JSON.parse(items);
+        const projects: valuesProps[] = JSON.parse(localStorage.getItem(key) as string);
         return projects;
     }
 
